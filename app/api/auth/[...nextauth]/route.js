@@ -1,3 +1,4 @@
+
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 
@@ -12,7 +13,15 @@ export const authOptions = {
 
         const user = {"id":1}
 
-        return user
+
+        if(email == 'mihir@gmail.com' && password == '1234'){
+          return user
+        }
+
+        else {
+          return null
+        }
+
 
         // try {
         //   await connectMongoDB();
